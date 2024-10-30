@@ -12,7 +12,7 @@
       {{ partial "footer.html" . }}
     </div>
     {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" }}
-    <script src="{{ .RelPermalink }}"></script>
+    <script src="{{ .RelPermalink }}" async></script>
     {{- end }}
   </body>
 </html>
