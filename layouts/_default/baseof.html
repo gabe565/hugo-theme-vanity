@@ -11,8 +11,5 @@
     <div id="footer" class="container">
       {{ partial "footer.html" . }}
     </div>
-    {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" }}
-    <script src="{{ .RelPermalink }}" async></script>
-    {{- end }}
   </body>
 </html>

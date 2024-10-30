@@ -4,9 +4,6 @@
   {{- with resources.Get "css/main.scss" | toCSS | minify | fingerprint "md5" }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- end }}
-  {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" }}
-  <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- end }}
 
   {{- $title := print .Site.Title " | " .Title }}
   {{- if .IsHome }}{{ $title = .Site.Title }}{{ end -}}
