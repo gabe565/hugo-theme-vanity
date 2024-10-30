@@ -9,3 +9,20 @@
                 </a>
               </td>
             </tr>
+
+{{- $desc := .Description }}
+{{- if not $desc }}
+  {{- with .Params.repository }}
+    {{- if strings.HasPrefix . "github.com/" }}
+      {{- with strings.TrimPrefix "github.com/" . | printf "https://api.github.com/repos/%s" | resources.GetRemote | transform.Unmarshal }}
+        {{- $desc = .description }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with $desc }}
+            <tr class="description">
+              <td colspan="2">{{ $desc }}<td>
+            </tr>
+{{- end }}

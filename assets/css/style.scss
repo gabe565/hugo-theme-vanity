@@ -2,6 +2,7 @@
   --primary: #1e9cd5;
   --background: #fff;
   --text: #000;
+  --text-gray: #555759;
   --border: #e1e1e1;
 
   --page-link-background: var(--background);
@@ -15,6 +16,7 @@
     --primary: #50b7e0;
     --background: #202224;
     --text: #f0f1f2;
+    --text-gray: #848688;
     --border: #6e7072;
 
     --page-link-hover-background: #3e4042;
@@ -49,6 +51,21 @@ a {
 
 th, td {
   border-bottom-color: var(--border);
+}
+
+tr:has(+ tr.description) {
+  th, td {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+tr.description {
+  th, td {
+    color: var(--text-gray);
+    padding-top: 0;
+    padding-left: 4%;
+  }
 }
 
 #content {
