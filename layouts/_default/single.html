@@ -23,7 +23,7 @@
     &lt;meta http-equiv="refresh" content="0; url=https://{{ partial "repo.html" . }}"&gt;<br />
   </code></pre>
 
-  {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" }}
+  {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- end }}
   {{- with resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" }}
