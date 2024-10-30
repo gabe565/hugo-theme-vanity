@@ -3,7 +3,9 @@
               <td><a href="https://{{ partial "repo.html" . }}">{{ partial "repo.html" . }}</a></td>
               <td>
                 <a href="https://{{ partial "doc.html" . }}">
-                  <img src="https://img.shields.io/badge/godoc-reference-blue?style=for-the-badge&color=1EAEDB" alt="GoDoc" />
+                  {{- with resources.GetRemote "https://img.shields.io/badge/godoc-reference-blue?style=for-the-badge&color=1EAEDB" }}
+                  <img src="{{ .RelPermalink }}" alt="GoDoc">
+                  {{- end }}
                 </a>
               </td>
             </tr>
